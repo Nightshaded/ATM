@@ -88,7 +88,7 @@ public class CardHolder
         {
             Console.WriteLine("How much $$ would you like to withdraw: ");
             double withdrawal = Double.Parse(Console.ReadLine());
-            
+
             // checks if the user has enough in their balance to withdraw
             if(currentUser.getBalance() > withdrawal){
                 currentUser.SetBalance(currentUser.getBalance() - withdrawal)
@@ -98,7 +98,9 @@ public class CardHolder
                 Console.WriteLine($"Sorry you have insufficient money in your account to withdraw. /n Your balance is: {currentUser.getBalance()}")
             }
         }
-
+        
+        List<cardHolder> cardHolders = new List<cardHolder>();
+        cardHolders.Add(new cardHolder("5550130966726224", 3123, "John", "Smith", 1200.51))
     }
 }
 
