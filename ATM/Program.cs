@@ -39,7 +39,7 @@ public class CardHolder
         return balance;
     }
     
-    /Setters
+// Setters
     public void SetCardNum(string cardNum)
     { 
         this.cardNum = cardNum; 
@@ -61,9 +61,10 @@ public class CardHolder
         this.balance = balance;
     }
 
-
+// Main
     public static void Main(string[] args)
     {
+        // Prints the list of potential options to choose from
         void PrintOptions()
         {
             Console.WriteLine("Please choose from one of the following options...");
@@ -72,6 +73,8 @@ public class CardHolder
             Console.WriteLine("3. Show Balance");
             Console.WriteLine("4. Exit");
         }
+
+        // Deposit option
         void Deposit(CardHolder currentUser)
         {
             Console.WriteLine("How much $$ would you like to deposit? ");
@@ -79,6 +82,23 @@ public class CardHolder
             currentUser.SetBalance(currentUser.getBalance() + deposit);
             Console.WriteLine($"Thank you for your $$. Your new balance is: {currentUser.getBalance()}");
         }
+
+        // Withdrawal option
+        void Withdraw(cardHolder currentUser)
+        {
+            Console.WriteLine("How much $$ would you like to withdraw: ");
+            double withdrawal = Double.Parse(Console.ReadLine());
+            
+            // checks if the user has enough in their balance to withdraw
+            if(currentUser.getBalance() > withdrawal){
+                currentUser.SetBalance(currentUser.getBalance() - withdrawal)
+                Console.WriteLine($"Thanks for you withdrawal. Your new balance is: {currentUser.getBalance()}")
+            }
+            else{
+                Console.WriteLine($"Sorry you have insufficient money in your account to withdraw. /n Your balance is: {currentUser.getBalance()}")
+            }
+        }
+
     }
 }
 
