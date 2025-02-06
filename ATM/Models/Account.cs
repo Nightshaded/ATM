@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 public class Account
 {
-    string cardNum;
+    string accountNumber;
     int pin;
     string firstName;
     string lastName;
     double balance;
 
-    public Account(string cardNum, int pin, string firstName, string lastName, double balance)
+    public Account(string accountNumber, int pin, string firstName, string lastName, double balance)
     {
-        this.cardNum = cardNum;
+        this.accountNumber = accountNumber;
         this.pin = pin;
         this.firstName = firstName;
         this.lastName = lastName;
         this.balance = balance;
     }
 // Getters
-    public string GetCardNum()
+    public string GetAccountNumber()
     {
-        return cardNum;
+        return accountNumber;
     }
     public int GetPin() 
     {
@@ -30,19 +30,19 @@ public class Account
     { 
         return firstName;
     }
-    public string getLastName()
+    public string GetLastName()
     {
         return lastName;
     }
-    public double getBalance()
+    public double GetBalance()
     {
         return balance;
     }
     
 // Setters
-    public void SetCardNum(string cardNum)
+    public void SetAccountNumber(string accountNumber)
     { 
-        this.cardNum = cardNum; 
+        this.accountNumber = accountNumber; 
     }
     public void SetPin(int pin)
     {

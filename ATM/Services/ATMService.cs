@@ -47,8 +47,8 @@
         {
             Console.WriteLine("How much $$ would you like to deposit? ");
             double deposit = Double.Parse(Console.ReadLine() ?? "0");
-            currentUser.SetBalance(currentUser.getBalance() + deposit);
-            Console.WriteLine($"Thank you for your $$. Your new balance is: {currentUser.getBalance()}");
+            currentUser.SetBalance(currentUser.GetBalance() + deposit);
+            Console.WriteLine($"Thank you for your $$. Your new balance is: {currentUser.GetBalance()}");
         }
 
         // Withdrawal option
@@ -58,12 +58,12 @@
             double withdrawal = Double.Parse(Console.ReadLine() ?? "0");
 
             // checks if the user has enough in their balance to withdraw
-            if(currentUser.getBalance() > withdrawal){
-                currentUser.SetBalance(currentUser.getBalance() - withdrawal);
-                Console.WriteLine($"Thanks for you withdrawal. Your new balance is: {currentUser.getBalance()}");
+            if(currentUser.GetBalance() > withdrawal){
+                currentUser.SetBalance(currentUser.GetBalance() - withdrawal);
+                Console.WriteLine($"Thanks for you withdrawal. Your new balance is: {currentUser.GetBalance()}");
             }
             else{
-                Console.WriteLine($"Sorry you have insufficient money in your account to withdraw. /n Your balance is: {currentUser.getBalance()}");
+                Console.WriteLine($"Sorry you have insufficient money in your account to withdraw. /n Your balance is: {currentUser.GetBalance()}");
             }
         }
     }
