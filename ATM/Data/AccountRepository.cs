@@ -18,6 +18,7 @@ public class AccountRepository
         return accounts;
     }
 
+    // Find the account in the database
     public Account FindAccount(string accountNumber)
     {
         return accounts.Find(acc => acc.GetAccountNumber() == accountNumber);
