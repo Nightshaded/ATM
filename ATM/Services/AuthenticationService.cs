@@ -4,6 +4,7 @@ public class AuthenticationService
     {
         // Initialise the variables
         AccountRepository accountList = new AccountRepository();
+        ATMService ATMService = new ATMService();
         bool restartAccount;
         bool restartPin;
         int pinAttempts = 3;
@@ -35,9 +36,10 @@ public class AuthenticationService
                         // Checks if the pin input matches with the account 
                         if(currentAccount.GetPin() == pinNumber)
                         {
-                            Console.WriteLine("Successfully logged in");
                             // Resets the pinAttempts for future when you can logout and log back in the same session
                             pinAttempts = 3;
+                            Console.WriteLine("Successfully logged in");
+                            ATMService.PrintOptions();
                         }
                         else{
                             restartPin = true;

@@ -1,7 +1,7 @@
     using System;
     public class ATMService
     {
-
+         AuthenticationService login = new AuthenticationService();
         // Login to account
         public void LoginOptions()
         {
@@ -15,7 +15,6 @@
                 if(UserInput == "1"){
                     // Calls the AuthenticationService class to authenticate the user with the account details
                     restart = false;
-                    AuthenticationService login = new AuthenticationService();
                     login.Authentication();
                 }
                 else if(UserInput == "2"){
@@ -40,6 +39,8 @@
             Console.WriteLine("3. Show Balance");
             Console.WriteLine("4. View Previous Transactions");
             Console.WriteLine("5. Exit");
+            string input = Console.ReadLine() ?? "0";
+            InputValidation.IsValidInteger(input);
         }
 
         // Deposit option
