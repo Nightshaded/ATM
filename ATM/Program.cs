@@ -7,9 +7,10 @@ public class Program
 // Main
     public static void Main(string[] args)
     {
-        // Initialise accounts
-        ATMService session = new ATMService();
-        session.LoginOptions();
+        AccountRepository accountRepository = new AccountRepository();
+        AuthenticationService authService = new AuthenticationService(accountRepository);
+        ATMService session = new ATMService(authService);
+        session.StartSession();
     }
 }
 

@@ -6,9 +6,9 @@ public class AccountRepository
         // Initialise new dummy accounts
         accounts = new List<Account>
         {
-            new Account("3301021001574868",111,"Landon","Smith", 1500.50),
-            new Account("5301028977683383",222,"Anna","Allen", 100.10),
-            new Account("3521022299095202",333,"Jayden","Daniel", 1010.10)
+            new Account("3301021001574868",1111,"Landon","Smith", 1500.50),
+            new Account("5301028977683383",2222,"Anna","Allen", 100.10),
+            new Account("3521022299095202",3333,"Jayden","Daniel", 1010.10)
         };
     }
     
